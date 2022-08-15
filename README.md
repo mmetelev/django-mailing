@@ -24,7 +24,7 @@
     docker-compose up
 ~~~
 
-4. Создайте суперпользователя, где container_id имя контейнера
+4. Создайте суперпользователя.
 
 ~~~
     docker exec -it container_id python manage.py createsuperuser
