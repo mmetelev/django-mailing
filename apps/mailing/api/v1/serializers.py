@@ -38,4 +38,4 @@ class OperatorCodeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = OperatorCode
-        fields = ['id', 'operator_code']
+        fields = ['id', 'code']

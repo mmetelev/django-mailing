@@ -1,17 +1,38 @@
 # Сервис уведомлений
 
-## Сервис управления рассылками API администрирования и получения статистики.
+### Тестовое задание компании Фабрика решений
 
-Create and activate a virtual environment (Python3) using your preferred method. This functionality
-is [built into](https://docs.python.org/3/tutorial/venv.html) Python, if you do not have a preference.
+[Ссылка на задание](https://www.craft.do/s/n6OVYFVUpq0o6L)
 
-From the command line, type:
+## Дополнительные задания
 
-```
-git clone https://github.com/caktus/drf-sample.git
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
-```
+1. Swagger UI `docs/`
+2. Docker развертывание
 
-Open your browser to http://localhost:8000 and you should see the browsable version of the API.
+## Инструкция по развертыванию
+
+1. Клонируйте проект из репозитория.
+2. Создайте контейнер
+
+~~~
+    docker-compose build
+~~~
+
+3. Запустите контейнер.
+
+~~~
+    docker-compose up
+~~~
+
+4. Создайте суперпользователя, где container_id имя контейнера
+
+~~~
+    docker exec -it container_id python manage.py createsuperuser
+~~~
+
+Сервис доступен по ссылке `http://localhost:8000/` \
+Узнать имя контейнера можно командой
+
+~~~
+    docker ps
+~~~
